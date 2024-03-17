@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="../images/logo.png" />
   <title>Municipality of Angadanan, Isabela</title>
+  <link rel="stylesheet" href="/Angadanan/apsystem/admin/customCss/indexAdmin.css">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->

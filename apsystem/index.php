@@ -1,10 +1,10 @@
 <?php session_start(); ?>
 <?php include 'header.php'; ?>
-<body class="hold-transition login-page">
+<body class="custom-background-image"> <!--bacground-->
 <div class="login-box">
   	<div class="login-logo">
-  		<p id="date"></p>
-      <p id="time" class="bold"></p>
+  		<p id="date" class="color-Date bold"></p>
+      <p id="time" class="bold color-Date"></p>
   	</div>
   
   	<div class="login-box-body">
@@ -23,7 +23,7 @@
       		</div>
       		<div class="row">
     			<div class="col-xs-4">
-          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="signin"><i class="fa fa-sign-in"></i> Sign In</button>
+          			<button type="submit" class="btn btn-primary btn-block btn-flat" name="signin"> Submit</button>
         		</div>
       		</div>
     	</form>
