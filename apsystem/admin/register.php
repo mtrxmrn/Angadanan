@@ -8,6 +8,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link rel="stylesheet" href="../dist/css/register.css">
 
         <!-- Bootstrap CSS v5.2.1 -->
         <link
@@ -16,13 +17,51 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
-    </head>
 
-    <body>
-        <header>
-            <p>succes gar</p>
-        </header>
-        <main></main>
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Noto+Sans:wght@300&family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <body class="bg-color">
+      
+        <main class="container-fluid d-flex justify-content-center custom-font">
+            <div class="background-register rounded mt-top"> <!--background-for registration-->
+            <div class="p-5 "> <!--for element of h1 and input-->
+            <div class="custom-font"> <!--For h1-->
+                <h1>Registration</h1>
+            </div>
+            <form action="#" method="post">
+            <div class="row"> 
+            <div class="col-lg-6 col-sm-6 p-3">
+                <label class="mt-2" for="fname">Full Name</label><br>
+                <input class="rounded border p-1 mt-1" type="text" placeholder="Enter your name"><br>
+
+                <label class="mt-2" for="email">Email</label><br>
+                <input class="rounded border p-1 mt-1" type="email" placeholder="Enter your email" required><br>
+
+                <label class="mt-2" for="password">Password</label><br>
+                <input class="rounded border p-1 mt-1" type="password" placeholder="Enter your password" required><br>
+            </div>
+            <div class="col-lg-6 col-sm-6 p-3">
+                <label class="mt-2" for="Username">User Name</label><br>
+                <input class="rounded border p-1 mt-1" type="text" placeholder="Enter your username"><br>
+
+                <label class="mt-2" for="pNumber">Phone Number</label><br>
+                <input class="rounded border p-1 mt-1" type="number" placeholder="Enter your phone number" required><br>
+                
+                <label class="mt-2" for="confirmpassword">Confirm Password</label><br>
+                <input class="rounded border p-1 mt-1" type="password" placeholder="Confirm password" required>
+            </div>
+            <div class="mt-5 text-center">
+                <input class="bttn bg-color border text-white" type="submit" value="Register" >
+            </div>
+            </div>
+            </form>
+            </div>
+            </div>
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>

@@ -8,7 +8,7 @@
   	</div>
   
   	<div class="login-box-body">
-    	<h4 class="login-box-msg">Enter Employee ID</h4>
+    	<h4 class="login-box-msg ">Enter Employee ID</h4>
 
     	<form id="attendance">
           <div class="form-group">
@@ -41,6 +41,7 @@
 	
 <?php include 'scripts.php' ?>
 <script type="text/javascript">
+
 $(function() {
   var interval = setInterval(function() {
     var momentNow = moment();
@@ -73,6 +74,9 @@ $(function() {
   });
     
 });
+
+// script for modal
+
 </script>
 </body>
 </html>
