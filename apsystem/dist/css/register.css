@@ -13,11 +13,13 @@
     width: 30%;
 }
 .bg-color {
-    background-image: linear-gradient(to left, rgb(242, 148, 218) , rgba(91, 7, 95, 0.366));
+    background-color: #d2d6de;
 }
 .bttn {
     width: 70%;
-     padding: 5px;
+    padding: 5px;
+        background-color: #3c8dbc;
+    border-color: #367fa9;
 }
 
 .mt-top {

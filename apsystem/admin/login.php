@@ -20,14 +20,14 @@
 			}
 			else{
 				$_SESSION['error'] = 'Incorrect password';
+			header('location: index.php');
 			}
 		}
-		
 	}
 	else{
 		$_SESSION['error'] = 'Input admin credentials first';
+	
 	}
-
-	header('location: index.php');
+header('location: index.php');
 
 ?>

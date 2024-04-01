@@ -47,7 +47,6 @@
                         </div>
                         <div class="col-sm-3">
                             <button type="button" class="btn btn-primary" onclick="sendcode();" id="btnCode">Send Code</button>
-
                         </div>
                         <p id="verificationError" style="text-align: center; font-weight: bold; color:red;"></p>
                     </div>
