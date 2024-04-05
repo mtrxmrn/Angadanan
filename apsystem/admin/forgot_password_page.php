@@ -11,15 +11,15 @@ $_SESSION['token'] = $_GET['token'];
 ?>
 <?php include 'includes/header.php';
 if (isset($_SESSION['token'])) {
-    $stmt = $conn->prepare("SELECT used FROM forgot_password WHERE token = ?");
+    $stmt = $conn->prepare("SELECT token FROM forgot_password WHERE token = ?");
     $stmt->bind_param("s", $_SESSION['token']);
     $stmt->execute();
     $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-    $isUsed = $row['used'];
 
-    if ($isUsed == '1') {
-        header('Location:forgot_password_notFound.php');
+    if ($result->num_rows == 0) {
+        // No matching token found
+        header('Location: forgot_password_notFound.php');
+        exit; // Stop execution after redirection
     }
 }
 
@@ -57,10 +57,9 @@ if (isset($_SESSION['token'])) {
         font-size: large;
     }
 
-    #eye-close-pass{
+    #eye-close-pass {
         cursor: pointer;
     }
-
 </style>
 
 <body class="hold-transition login-page">
@@ -108,7 +107,7 @@ if (isset($_SESSION['token'])) {
                 success: (response) => {
                     document.querySelector('#mismatch').innerHTML = response;
                     alert("Password has changed!");
-                    window.location.href = "index.php";
+                   window.location.href = "index.php";
                 },
                 error: (xhr) => {
                     document.querySelector('#mismatch').innerHTML = xhr.responseText;
@@ -116,7 +115,6 @@ if (isset($_SESSION['token'])) {
                 }
             })
         })
-     
     </script>
 </body>
 

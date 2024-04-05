@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
         $email = $row['email'];
         $generatedToken = generateToken();
         insertToken($generatedToken, $email, $conn);
-        $generatedLink = 'http://localhost/Thesis/apsystem/admin/forgot_password_page.php?token=' . $generatedToken;
+        $generatedLink = 'http://localhost/Angadanan/apsystem/admin/forgot_password_page.php?token=' . $generatedToken;
         http_response_code(200);
     }
 } else {

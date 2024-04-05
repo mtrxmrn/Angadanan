@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require 'includes/conn.php';
 
@@ -10,8 +11,6 @@ $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
 
 // Assuming you have stored the token in the session
 $token = $_SESSION['token'];
-
-
 
 
 // Query email using token
@@ -26,13 +25,11 @@ if ($password != $confirmPassword) {
     http_response_code(400); // Set HTTP status code to 400 (Bad Request)
     echo "Password mismatched!";
     exit;
-}
-else if (strlen($password) < 8) {
+} else if (strlen($password) < 8) {
     http_response_code(400);
     echo "Password should be longer than 8 characters!";
     exit;
-}
-else if ($password == $confirmPassword) {
+} else if ($password == $confirmPassword) {
     http_response_code(200); // Set HTTP status code to 200 (OK)
     // Update password for the admin with the retrieved email
     try {
@@ -42,9 +39,8 @@ else if ($password == $confirmPassword) {
         $stmt->execute();
 
         // Mark forgot password token as used
-        $isUsed = 1;
-        $stmt = $conn->prepare("UPDATE forgot_password SET used = ? WHERE token = ?");
-        $stmt->bind_param("ss", $isUsed, $token);
+        $stmt = $conn->prepare("DELETE FROM forgot_password WHERE email = ?");
+        $stmt->bind_param("s", $email);
         $stmt->execute();
 
         echo "Password updated successfully!";
@@ -55,5 +51,4 @@ else if ($password == $confirmPassword) {
     }
 
     echo "Password updated successfully!";
-} 
-
+}
