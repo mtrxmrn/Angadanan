@@ -25,7 +25,8 @@ if ($password != $confirmPassword) {
     http_response_code(400); // Set HTTP status code to 400 (Bad Request)
     echo "Password mismatched!";
     exit;
-} else if (strlen($password) < 8) {
+} 
+if (strlen($password) < 8) {
     http_response_code(400);
     echo "Password should be longer than 8 characters!";
     exit;

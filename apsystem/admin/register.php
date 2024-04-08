@@ -95,15 +95,15 @@ session_start();
             let countdown = 60;
             let countdownInterval = setInterval(() => {
                 if (countdown > 0) {
-                    btn.innerHTML = countdown--;
+                    button.innerHTML = countdown--;
                     console.log(countdown);
                 } else {
                     clearInterval(countdownInterval);
-                    btn.innerHTML = 'Re-send Code';
+                    button.innerHTML = 'Re-send Code';
                 }
             }, 1000);
             setTimeout(() => {
-                btn.disabled = false;
+                button.disabled = false;
             }, 60000);
             $.ajax({
                 url: 'register_code.php',
