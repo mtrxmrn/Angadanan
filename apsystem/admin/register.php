@@ -27,18 +27,19 @@ session_start();
 <body class="bg-color">
 
     <main class="container-fluid d-flex justify-content-center custom-font">
-        <?php
-        if (isset($_SESSION['error'])) {
-            echo '
-                    <div >
-                        ' . $_SESSION['error'] . '
-                    </div>
-                    ';
-            unset($_SESSION['error']);
-        }
-        ?>
+    <?php
+    if (isset($_SESSION['error'])) {
+        echo '
+            <div class="text-danger border position-absolute mt-5">
+                ' . $_SESSION['error'] . '
+            </div>
+        ';
+        unset($_SESSION['error']);
+    }
+?>
+
         <div class="background-register rounded mt-top"> <!--background-for registration-->
-            <div class="mt-">asd</div>
+    
             <div class="p-5"> <!--for element of h1 and input-->
                 <div class="custom-font text-center"> <!--For h1-->
                     <h1>Registration</h1>

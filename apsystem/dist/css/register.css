@@ -13,7 +13,11 @@
     width: 30%;
 }
 .bg-color {
+<<<<<<< Updated upstream
     background-color: #d2d6de;
+=======
+    background-image: linear-gradient(to left, rgb(110, 93, 107) , rgba(91, 7, 95, 0.366));
+>>>>>>> Stashed changes
 }
 .bttn {
     width: 70%;
