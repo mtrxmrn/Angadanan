@@ -11,6 +11,7 @@
 .background-register {
     background-color: white;
     width: 30%;
+    border: 1px solid black;
 }
 .bg-color {
 <<<<<<< Updated upstream
@@ -22,14 +23,24 @@
 .bttn {
     width: 70%;
     padding: 5px;
-        background-color: #3c8dbc;
+    background-color: #3c8dbc;
     border-color: #367fa9;
 }
 
-.mt-top {
+.mt-top  {
     margin-top: 15em;
 }
+.custom-mt-top {
+    margin-top: 12.4em;
+}
 
+
+.mt-custom {
+    margin-top: 2em;
+}
+.custom-width {
+ width : 589px;
+}
 @media screen and (max-width: 1024px) and (max-height: 768px) {
     .mt-top {
         margin-top: 5em;

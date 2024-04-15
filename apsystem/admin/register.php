@@ -30,7 +30,7 @@ session_start();
     <?php
     if (isset($_SESSION['error'])) {
         echo '
-            <div class="text-danger border position-absolute mt-5">
+            <div class="text-white border bg-danger position-absolute custom-mt-top text-center p-2 custom-width">
                 ' . $_SESSION['error'] . '
             </div>
         ';
@@ -38,48 +38,51 @@ session_start();
     }
 ?>
 
-        <div class="background-register rounded mt-top"> <!--background-for registration-->
+    <div class="background-register rounded mt-top"> <!--background-for registration-->
     
-            <div class="p-5"> <!--for element of h1 and input-->
-                <div class="custom-font text-center"> <!--For h1-->
-                    <h1>Registration</h1>
-                </div>
-                <form action="register_process.php" method="POST">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-6 p-3">
-                            <label class="mt-2" for="fname">First Name</label><br>
-                            <input class="rounded border p-1 mt-1" type="text" placeholder="Enter your name" name="fname" id="fname"><br>
+    <div class="p-5"> <!--for element of h1 and input-->
+    <div class="custom-font text-center"> <!--For h1-->
+        <h1>Registration</h1>
+    </div>
 
-                            <label class="mt-2" for="username">Username</label><br>
-                            <input class="rounded border p-1 mt-1" type="text" placeholder="Enter your email" name="username" id="username" required><br>
+    <form action="register_process.php" method="POST">
+    <div class="row">
+    <div class="col-lg-6 col-sm-6 p-3">
+        <label class="mt-2" for="fname">First Name</label><br>
+        <input class="rounded border p-1 mt-1" type="text" placeholder="Enter your name" name="fname" id="fname"><br>
 
-                            <label class="mt-2" for="password">Password</label><br>
-                            <input class="rounded border p-1 mt-1" type="password" placeholder="Enter your password" name="password" id="password" required><br>
+        <label class="mt-2" for="username">Username</label><br>
+        <input class="rounded border p-1 mt-1" type="text" placeholder="Enter your email" name="username" id="username" required><br>
 
-                            <label class="mt-2" for="code">Code</label><br>
-                            <input class="rounded border p-1 mt-1" type="text" placeholder="Enter the code" name="code" id="code" required>
+        <label class="mt-2" for="password">Password</label><br>
+        <input class="rounded border p-1 mt-1" type="password" placeholder="Enter your password" name="password" id="password" required><br>
 
-                            <button type="button" class="bttn border text-white" onclick="sendCode();" id="codeBtn">Send</button>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 p-3">
-                            <label class="mt-2" for="lname">Last Name</label><br>
-                            <input class="rounded border p-1 mt-1" type="text" placeholder="Enter your last name" name="lname" id="lname"><br>
+        <label class="mt-2" for="code">Code</label><br>
+        <input class="rounded border p-1 mt-1" type="text" placeholder="Enter the code" name="code" id="code" required>
 
-                            <label class="mt-2" for="email">Email</label><br>
-                            <input class="rounded border p-1 mt-1" type="email" placeholder="Enter your email" name="email" id="email" required><br>
+                            
+    </div>
+    <div class="col-lg-6 col-sm-6 p-3">
+        <label class="mt-2" for="lname">Last Name</label><br>
+        <input class="rounded border p-1 mt-1" type="text" placeholder="Enter your last name" name="lname" id="lname"><br>
 
-                            <label class="mt-2" for="cpassword">Confirm Password</label><br>
-                            <input class="rounded border p-1 mt-1" type="password" placeholder="Confirm password" name="cpassword" id="cpassword" required>
-                        </div>
+        <label class="mt-2" for="email">Email</label><br>
+        <input class="rounded border p-1 mt-1" type="email" placeholder="Enter your email" name="email" id="email" required><br>
+
+        <label class="mt-2" for="cpassword">Confirm Password</label><br>
+        <input class="rounded border p-1 mt-1" type="password" placeholder="Confirm password" name="cpassword" id="cpassword" required>
+
+        <button type="button" class="bttn border text-white mt-custom " onclick="sendCode();" id="codeBtn">Send</button>
+    </div>
 
 
-                        <div class="mt-5 text-center">
-                            <input class="bttn  border text-white" type="submit" value="Register">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+    <div class="mt-5 text-center">
+        <input class="bttn  border text-white" type="submit" value="Register">
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
     </main>
     <footer>
         <!-- place footer here -->
